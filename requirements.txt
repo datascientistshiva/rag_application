@@ -1,0 +1,6 @@
+langchain
+langchain-community
+PyPDF2
+# Vector store database.
+faiss-cpu
+
