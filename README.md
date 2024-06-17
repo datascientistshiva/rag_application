@@ -14,10 +14,10 @@
 **About the application**
 ***Structure of the application***
 1. **requirements.txt**
-    - langchain : ***Framework used to develop and manage LLM application***
-    - langchain-community : ***Community of langchain***
-    - PyPDF2 : ***For the pdf loading and processing***
-    - faiss-cpu : ***Vector store database***
+    - **langchain** : ***Framework used to develop and manage LLM application***
+    - **langchain-community** : ***Community of langchain***
+    - **PyPDF2** : ***For the pdf loading and processing***
+    - **faiss-cpu** : ***Vector store database***
 
 2. **app.py**
     - This is the main python file which is responsible to run our rag application.
