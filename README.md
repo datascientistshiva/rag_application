@@ -1,3 +1,9 @@
+**Introduction**
+This is a RAG(Retrieval-Augmented Generation) based question/answering application where user can ask questions related to the pdf document. RAG is a technique used to improve the accuracy and reliability of large language models (LLMs) with the help of embeddings. Here, for the embeddings OllamaEmbeddings is used and FIASS vectorstore database is used to store the embedding. The vector embedding from FIASS vectorstore db is also stored in the directory. Langchain is used as it is very easy and dynamic framework to use for building RAG based application. 
+
+When the user ask anything about the document then, it first create the embedding for the input text and using the embedding it then send the request to main LLM(Ollama) model as a context to get the clear and consice results. For this purpose, there is a chain called retriever_chain which will fetch the embedding which are very similar to user input from the vector db. ChatPromptTemplate is used to handle the prompts that will later be sent to LLM model.
+
+
 **To run the application, follow below steps**
 - Install python in your pc or laptop.
 - Clone the application to your local environment
@@ -25,7 +31,7 @@
     - ***Workflows***
       - Load the document using PyPDFLoader.
       - Spit the document using RecursiceCharacterTextSplitter with chunk_size = 1000 and chunk_overlap = 200 .
-      - Create the vector embedding from OllamaEmbedding.
+      - Create the vector embedding of the splitted documents using OllamaEmbedding.
       - Store or load the vector in FIASS vector db.
       - Create document_chain and retriever_chain.
       - Finally, Retriever chain will fetch the embedding which are very similar to user input from the vector db and take that data as a context to LLM which can generate highly accurate information about the document.
